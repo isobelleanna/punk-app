@@ -3,12 +3,12 @@ import SearchBox from "../../components/SearchBox/SearchBox";
 import FilterItem from "../../components/FilterItem/FilterItem";
 import FiltersList from "../../components/FiltersList/FiltersList";
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const { searchTerm, handleInput } = props;
   return (
     <div>
-      <SearchBox />
+      <SearchBox handleInput={handleInput} searchTerm={searchTerm} />
       <FiltersList />
-      <FilterItem />
     </div>
   );
 };

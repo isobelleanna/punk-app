@@ -5,7 +5,7 @@ import Card from "../Card/Card";
 const CardList = (props) => {
   const { beersArr } = props;
   return (
-    <div>
+    <div className="card-list">
       {beersArr.map((beer) => (
         <Card
           key={beer.id}
