@@ -1,10 +1,20 @@
 import React from "react";
 import "./FilterItem.scss";
 
-const FilterItem = () => {
+const FilterItem = (props) => {
+  const { label, type, value, handleChange, checked } = props;
   return (
     <div>
-      <input type="checkbox" />
+      <label htmlFor="input">
+        {label}
+        <input
+          name="input"
+          type={type}
+          value={value}
+          onChange={handleChange}
+          checked={checked}
+        />
+      </label>
     </div>
   );
 };

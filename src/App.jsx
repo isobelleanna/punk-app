@@ -6,8 +6,11 @@ import { useState } from "react";
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [isChecked, setIsChecked] = useState(
+    new Array(beers.length).fill(false)
+  );
 
-  const handleInput = (event) => {
+  const handleSearchInput = (event) => {
     const input = event.target.value.toLowerCase();
     setSearchTerm(input);
   };
@@ -15,13 +18,26 @@ function App() {
     const nameLower = beer.name.toLowerCase();
     return nameLower.includes(searchTerm);
   });
+  const handleCheckboxOnChange = (event) => {
+    console.log(event.target.value);
+    setIsChecked(!isChecked);
+    if (isChecked === true) {
+      return filterBySearch.filter((beer) => beer.abv > 6);
+    }
+  };
 
+  console.log(isChecked);
   return (
     <div className="App">
-      <section class="navbar">
-        <Navbar handleInput={handleInput} searchTerm={searchTerm} />
+      <section className="navbar">
+        <Navbar
+          handleInput={handleSearchInput}
+          searchTerm={searchTerm}
+          handleChange={handleCheckboxOnChange}
+          checked={isChecked}
+        />
       </section>
-      <section class="main">
+      <section className="main">
         <Main beersArr={filterBySearch} />
       </section>
     </div>

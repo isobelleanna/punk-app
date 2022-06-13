@@ -6,16 +6,15 @@ const SearchBox = (props) => {
   return (
     <form className="search-box">
       <label htmlFor="search-box" className="search-box__label">
-        Search
+        <input
+          type="text"
+          name="search"
+          className="search-box__input"
+          value={searchTerm}
+          onInput={handleInput}
+          placeholder="Search"
+        />
       </label>
-      <input
-        type="text"
-        name="search"
-        className="search-box__input"
-        value={searchTerm}
-        onInput={handleInput}
-        placeholder="Search"
-      />
     </form>
   );
 };
