@@ -1,17 +1,47 @@
 import React from "react";
 import "./FiltersList.scss";
-import FilterItem from "../FilterItem/FilterItem";
+import Range from "../Range/Range";
+import Checkbox from "../Checkbox/Checkbox";
 
 const FiltersList = (props) => {
-  const { handleChange, checked } = props;
+  const {
+    label,
+    id,
+    onChange,
+    value,
+    min = 1,
+    max = 80,
+    checkedABV,
+    checkedClassic,
+    checkedAcid,
+    onCheckboxChangeABV,
+    onCheckboxChangeAcid,
+    onCheckboxChangeClassic,
+  } = props;
   return (
     <div className="filter-list">
-      <FilterItem
-        label="High ABV (>6.0%)"
-        type="checkbox"
-        value="6"
-        handleChange={handleChange}
-        checked={checked}
+      <Range
+        label={label}
+        id={id}
+        onChange={onChange}
+        value={value}
+        min={min}
+        max={max}
+      />
+      <Checkbox
+        checkLabel="High ABV (>6.0%)"
+        onCheckboxChange={onCheckboxChangeABV}
+        checked={checkedABV}
+      />
+      <Checkbox
+        checkLabel="Classic Range"
+        onCheckboxChange={onCheckboxChangeClassic}
+        checked={checkedClassic}
+      />
+      <Checkbox
+        checkLabel="Acidic (ph < 4)"
+        onCheckboxChange={onCheckboxChangeAcid}
+        checked={checkedAcid}
       />
     </div>
   );

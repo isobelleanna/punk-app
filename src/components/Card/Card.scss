@@ -2,11 +2,20 @@
 .card {
     border: 1px solid $border;
     width: 200px;
-    height: 700px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__name {
+        text-align: center;
+    }&__tagline {
+        text-align: center;
+    }
     &__image {
         width: 5vw;
         height: auto
-    }&__food {
+    }&__stats {
         text-align: left;
     }
 }

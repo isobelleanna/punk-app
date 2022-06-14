@@ -11,8 +11,8 @@ const CardList = (props) => {
           key={beer.id}
           name={beer.name}
           tagline={beer.tagline}
-          brewersTip={beer.brewers_tips}
-          foodPairings={beer.food_pairing}
+          ph={beer.ph}
+          abv={beer.abv}
           image={beer.image_url}
         />
       ))}
