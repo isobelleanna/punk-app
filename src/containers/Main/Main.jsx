@@ -5,7 +5,7 @@ import CardList from "../../components/CardList/CardList";
 const Main = (props) => {
   const { beersArr } = props;
   return (
-    <div>
+    <div className="main">
       <CardList beersArr={beersArr} />
     </div>
   );

@@ -2,6 +2,7 @@ import "./App.scss";
 import Main from "./containers/Main/Main";
 import Navbar from "./containers/Navbar/Navbar";
 import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [beers, setBeers] = useState([]);
