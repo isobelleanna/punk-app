@@ -1,1 +1,9 @@
 @use "../../assets/sass/variables" as *;
+
+.nav-bar {
+    background-color: $nav-background;
+    font-family: $font-paragraphs;
+    height: 100%;
+    padding: 1em;
+    border: 1px solid $border;
+}

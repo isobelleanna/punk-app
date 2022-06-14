@@ -1,1 +1,5 @@
-@use "../../assets/sass/variables"
+@use "../../assets/sass/variables" as *;
+
+.checkbox {
+    margin-top: 1px;
+}

@@ -3,7 +3,7 @@ import "./Checkbox.scss";
 
 const Checkbox = ({ checkLabel, checked, onCheckboxChange }) => {
   return (
-    <div>
+    <div className="checkbox">
       <label>
         {checkLabel}
         <input type="checkbox" checked={checked} onChange={onCheckboxChange} />

@@ -1,6 +1,7 @@
 import React from "react";
 import SearchBox from "../../components/SearchBox/SearchBox";
 import FiltersList from "../../components/FiltersList/FiltersList";
+import "./Navbar.scss";
 
 const Navbar = (props) => {
   const {
@@ -20,7 +21,7 @@ const Navbar = (props) => {
     onCheckboxChangeClassic,
   } = props;
   return (
-    <div>
+    <div className="nav-bar">
       <SearchBox handleInput={handleInput} searchTerm={searchTerm} />
       <FiltersList
         label={label}

@@ -28,21 +28,23 @@ const FiltersList = (props) => {
         min={min}
         max={max}
       />
-      <Checkbox
-        checkLabel="High ABV (>6.0%)"
-        onCheckboxChange={onCheckboxChangeABV}
-        checked={checkedABV}
-      />
-      <Checkbox
-        checkLabel="Classic Range"
-        onCheckboxChange={onCheckboxChangeClassic}
-        checked={checkedClassic}
-      />
-      <Checkbox
-        checkLabel="Acidic (ph < 4)"
-        onCheckboxChange={onCheckboxChangeAcid}
-        checked={checkedAcid}
-      />
+      <section className="filter-list__checkboxes">
+        <Checkbox
+          checkLabel="High ABV (>6.0%)"
+          onCheckboxChange={onCheckboxChangeABV}
+          checked={checkedABV}
+        />
+        <Checkbox
+          checkLabel="Classic Range"
+          onCheckboxChange={onCheckboxChangeClassic}
+          checked={checkedClassic}
+        />
+        <Checkbox
+          checkLabel="Acidic (ph < 4)"
+          onCheckboxChange={onCheckboxChangeAcid}
+          checked={checkedAcid}
+        />
+      </section>
     </div>
   );
 };

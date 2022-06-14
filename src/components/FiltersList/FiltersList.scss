@@ -1,1 +1,9 @@
 @use "../../assets/sass/variables" as *;
+
+.filter-list {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    &__checkboxes {
+        margin-top: 1em;
+    }
+}

@@ -61,12 +61,12 @@ function App() {
   console.log(highABV);
 
   return (
-    <div className="App">
-      <section className="navbar">
+    <div className="app">
+      <section className="app__navbar">
         <Navbar
           handleInput={handleSearchInput}
           searchTerm={searchTerm}
-          label={`Number of Beers: ${numberOfBeer}`}
+          label={`Beers: ${numberOfBeer}`}
           min={1}
           max={80}
           id="beer-range"
@@ -80,7 +80,7 @@ function App() {
           checkedAcid={acidic}
         />
       </section>
-      <section className="main">
+      <section className="app__main">
         <Main beersArr={filterBySearch} />
       </section>
     </div>
