@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/punk-app/static/css/main.cf802d2f.css",
+    "main.js": "/punk-app/static/js/main.12677c80.js",
+    "static/js/787.11d7d8ae.chunk.js": "/punk-app/static/js/787.11d7d8ae.chunk.js",
+    "static/media/beer-background.jpg": "/punk-app/static/media/beer-background.90aa57f820bf212925d4.jpg",
+    "index.html": "/punk-app/index.html",
+    "main.cf802d2f.css.map": "/punk-app/static/css/main.cf802d2f.css.map",
+    "main.12677c80.js.map": "/punk-app/static/js/main.12677c80.js.map",
+    "787.11d7d8ae.chunk.js.map": "/punk-app/static/js/787.11d7d8ae.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cf802d2f.css",
+    "static/js/main.12677c80.js"
+  ]
+}
