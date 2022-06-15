@@ -28,7 +28,11 @@ function App() {
     }
     const res = await fetch(url);
     const data = await res.json();
-    setBeers(data);
+    if (acidNum) {
+      setBeers(data.filter((beer) => beer.ph < 4));
+    } else {
+      setBeers(data);
+    }
   };
   useEffect(() => {
     getBeers(numberOfBeer, highABV, classic, acidic);
