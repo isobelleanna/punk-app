@@ -4,7 +4,12 @@ import "./Footer.scss";
 const Footer = () => {
   return (
     <div className="footer">
-      <a href="https://github.com/isobelleanna/punk-app">Github</a>
+      <a
+        className="footer__item"
+        href="https://github.com/isobelleanna/punk-app"
+      >
+        Github
+      </a>
     </div>
   );
 };

@@ -1,1 +1,23 @@
 @use '../../assets/sass/variables' as *;
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2em;
+    &__item {
+        color: $main-paragraph;
+        padding: 8px;
+        text-decoration: none;
+        font-family: $font-paragraphs;
+        border-radius: 25px;
+        border: 1px solid $button-background;
+        margin: 1em;
+        &:hover {
+            background-color: $button-background;
+            color: $button-text;
+            border: none;
+        }
+    }
+
+}

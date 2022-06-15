@@ -1,2 +1,8 @@
 @use "../../assets/sass/variables" as *;
 
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+}
