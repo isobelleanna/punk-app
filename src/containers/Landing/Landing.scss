@@ -3,6 +3,7 @@
 .landing {
     height: 100%;
     background-color: black;
+    padding-bottom: 300px;
     &__img {
         width: 100%;
         position: absolute;
@@ -13,5 +14,10 @@
         width: 40vw;
         top: 240px;
         left: 10px;
+        &--title {
+            font-family: $font-headings;
+        }&--para {
+            font-family: $font-paragraphs;
+        }
     }
 }

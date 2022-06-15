@@ -1,6 +1,8 @@
 import "./App.scss";
 import Landing from "./containers/Landing/Landing";
 import Catalogue from "./containers/Catalogue/Catalogue";
+import Nav from "./containers/Nav/Nav";
+import Footer from "./containers/Footer/Footer";
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -65,6 +67,7 @@ function App() {
   return (
     <Router>
       <div className="app">
+        <Nav />
         <Routes>
           <Route path="/" element={<Landing />}></Route>
           <Route
@@ -90,6 +93,7 @@ function App() {
             }
           ></Route>
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
