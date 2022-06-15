@@ -1,0 +1,17 @@
+@use "../../assets/sass/variables" as *;
+
+.landing {
+    height: 100%;
+    background-color: black;
+    &__img {
+        width: 100%;
+        position: absolute;
+    }&__content {
+        padding: 1em;
+        position: relative;
+        color: $button-text;
+        width: 40vw;
+        top: 240px;
+        left: 10px;
+    }
+}

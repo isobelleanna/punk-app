@@ -1,6 +1,6 @@
 import "./App.scss";
-import Main from "./containers/Main/Main";
-import Navbar from "./containers/Navbar/Navbar";
+import Landing from "./containers/Landing/Landing";
+import Catalogue from "./containers/Catalogue/Catalogue";
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -29,7 +29,7 @@ function App() {
     const res = await fetch(url);
     const data = await res.json();
     if (acidNum) {
-      setBeers(data.filter((beer) => beer.ph < 4));
+      setBeers(data.filter((beer) => beer.ph < 4 && beer.ph !== ""));
     } else {
       setBeers(data);
     }
@@ -61,34 +61,37 @@ function App() {
   const handleAcidicChange = (event) => {
     setAcidic(!acidic);
   };
-  console.log(acidic);
-  console.log(classic);
-  console.log(highABV);
 
   return (
-    <div className="app">
-      <section className="app__navbar">
-        <Navbar
-          handleInput={handleSearchInput}
-          searchTerm={searchTerm}
-          label={`Beers: ${numberOfBeer}`}
-          min={1}
-          max={80}
-          id="beer-range"
-          onChange={handleNumberChange}
-          value={numberOfBeer}
-          onCheckboxChangeABV={handleABVChange}
-          checkedABV={highABV}
-          onCheckboxChangeClassic={handleClassicChange}
-          checkedClassic={classic}
-          onCheckboxChangeAcid={handleAcidicChange}
-          checkedAcid={acidic}
-        />
-      </section>
-      <section className="app__main">
-        <Main beersArr={filterBySearch} />
-      </section>
-    </div>
+    <Router>
+      <div className="app">
+        <Routes>
+          <Route path="/" element={<Landing />}></Route>
+          <Route
+            path="/main"
+            element={
+              <Catalogue
+                handleInput={handleSearchInput}
+                searchTerm={searchTerm}
+                label={`Beers: ${numberOfBeer}`}
+                min={1}
+                max={80}
+                id="beer-range"
+                onChange={handleNumberChange}
+                value={numberOfBeer}
+                onCheckboxChangeABV={handleABVChange}
+                checkedABV={highABV}
+                onCheckboxChangeClassic={handleClassicChange}
+                checkedClassic={classic}
+                onCheckboxChangeAcid={handleAcidicChange}
+                checkedAcid={acidic}
+                beersArr={filterBySearch}
+              />
+            }
+          ></Route>
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
