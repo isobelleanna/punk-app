@@ -11,6 +11,9 @@ const Nav = () => {
       <Link className="nav-menu__item" to="/main">
         Catalogue
       </Link>
+      <Link className="nav-menu__item" to="/random">
+        Random Beer
+      </Link>
     </div>
   );
 };

@@ -1,0 +1,8 @@
+@use "../../assets/sass/variables";
+
+.tile {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

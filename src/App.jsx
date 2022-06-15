@@ -5,6 +5,7 @@ import Nav from "./containers/Nav/Nav";
 import Footer from "./containers/Footer/Footer";
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import RandomBeer from "./containers/RandomBeer/RandomBeer";
 
 function App() {
   const [beers, setBeers] = useState([]);
@@ -25,13 +26,10 @@ function App() {
     if (classicStr) {
       url += `&brewed_before=01-2010`;
     }
-    if (acidNum) {
-      url += `&ph<4`;
-    }
     const res = await fetch(url);
     const data = await res.json();
     if (acidNum) {
-      setBeers(data.filter((beer) => beer.ph < 4 && beer.ph !== ""));
+      setBeers(data.filter((beer) => beer.ph < 4 && beer.ph !== null));
     } else {
       setBeers(data);
     }
@@ -70,6 +68,7 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Landing />}></Route>
+          <Route path="/random" element={<RandomBeer />}></Route>
           <Route
             path="/main"
             element={
