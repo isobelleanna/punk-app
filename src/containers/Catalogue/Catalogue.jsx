@@ -22,7 +22,7 @@ const Catalogue = (props) => {
     beersArr,
   } = props;
   return (
-    <div className="catalogue">
+    <div data-testid="catalogue" className="catalogue">
       <section className="catalogue__navbar">
         <Navbar
           handleInput={handleInput}
