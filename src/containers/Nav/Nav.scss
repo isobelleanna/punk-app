@@ -21,3 +21,29 @@
     }
 
 }
+
+@media screen and (min-width: 680px){
+    .nav-menu {
+        &__laptop{
+        display: block;
+        }
+        &__icon {
+            display: none;
+        }
+    
+    }
+    
+}
+
+@media screen and (max-width: 680px){
+    .nav-menu {
+        &__laptop{
+        display: none;
+        }
+        &__icon {
+            display: block;
+        }
+    
+    }
+    
+}

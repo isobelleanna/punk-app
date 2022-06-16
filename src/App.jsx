@@ -15,7 +15,7 @@ function App() {
   const [highABV, setHighABV] = useState(false);
   const [classic, setClassic] = useState(false);
   const [acidic, setAcidic] = useState(false);
-  const [randomBeer, setRandomBeer] = useState([]);
+  const [toggleMenu, setToggleMenu] = useState(false);
 
   const getBeers = async (beerNumber, abvNum, classicStr, acidNum) => {
     let url = "https://api.punkapi.com/v2/beers";
@@ -36,8 +36,6 @@ function App() {
     } else {
       setBeers(data);
     }
-    console.log(data);
-    setRandomBeer(data[1]);
   };
   useEffect(() => {
     getBeers(numberOfBeer, highABV, classic, acidic);
@@ -67,16 +65,17 @@ function App() {
     setAcidic(!acidic);
   };
 
+  const handleMenuToggle = () => {
+    setToggleMenu(!toggleMenu);
+  };
+
   return (
     <Router>
       <div className="app">
-        <Nav />
+        <Nav handleMenuToggle={handleMenuToggle} toggleMenu={toggleMenu} />
         <Routes>
           <Route path="/" element={<Landing />}></Route>
-          <Route
-            path="/random"
-            element={<RandomBeer randomBeer={randomBeer} />}
-          ></Route>
+          <Route path="/random" element={<RandomBeer />}></Route>
           <Route path="/taster-menu" element={<TasterMenu />}></Route>
           <Route
             path="/main"
