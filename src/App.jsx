@@ -6,6 +6,7 @@ import Footer from "./containers/Footer/Footer";
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import RandomBeer from "./containers/RandomBeer/RandomBeer";
+import TasterMenu from "./containers/TasterMenu/TasterMenu";
 
 function App() {
   const [beers, setBeers] = useState([]);
@@ -35,6 +36,8 @@ function App() {
     } else {
       setBeers(data);
     }
+    console.log(data);
+    setRandomBeer(data[1]);
   };
   useEffect(() => {
     getBeers(numberOfBeer, highABV, classic, acidic);
@@ -63,24 +66,18 @@ function App() {
   const handleAcidicChange = () => {
     setAcidic(!acidic);
   };
-  const getRandom = async () => {
-    let randomBeerUrl = "https://api.punkapi.com/v2/beers/random";
-    const randomRes = await fetch(randomBeerUrl);
-    const randomData = await randomRes.json();
-    console.log(randomData);
-    setRandomBeer(randomData);
-  };
-  console.log(randomBeer);
+
   return (
     <Router>
       <div className="app">
-        <Nav getRandom={getRandom} />
+        <Nav />
         <Routes>
           <Route path="/" element={<Landing />}></Route>
           <Route
             path="/random"
             element={<RandomBeer randomBeer={randomBeer} />}
           ></Route>
+          <Route path="/taster-menu" element={<TasterMenu />}></Route>
           <Route
             path="/main"
             element={

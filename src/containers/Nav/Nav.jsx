@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Nav.scss";
 
-const Nav = ({ getRandom }) => {
+const Nav = () => {
   return (
     <div className="nav-menu">
       <Link className="nav-menu__item" to="/">
@@ -11,11 +11,13 @@ const Nav = ({ getRandom }) => {
       <Link className="nav-menu__item" to="/main">
         Catalogue
       </Link>
-      <div onClick={getRandom}>
-        <Link className="nav-menu__item" to="/random">
-          Random Beer
-        </Link>
-      </div>
+
+      <Link className="nav-menu__item" to="/random">
+        Beer of the day
+      </Link>
+      <Link className="nav-menu__item" to="/taster-menu">
+        Taster Menu
+      </Link>
     </div>
   );
 };
