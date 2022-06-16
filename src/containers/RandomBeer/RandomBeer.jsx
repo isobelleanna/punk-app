@@ -2,10 +2,10 @@ import React from "react";
 import "./RandomBeer.scss";
 import BeerTile from "../../components/BeerTile/BeerTile";
 
-const RandomBeer = () => {
+const RandomBeer = ({ randomBeer }) => {
   return (
     <div className="random">
-      <BeerTile />
+      <BeerTile randomBeer={randomBeer} />
     </div>
   );
 };

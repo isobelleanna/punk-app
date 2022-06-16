@@ -14,6 +14,7 @@ function App() {
   const [highABV, setHighABV] = useState(false);
   const [classic, setClassic] = useState(false);
   const [acidic, setAcidic] = useState(false);
+  const [randomBeer, setRandomBeer] = useState([]);
 
   const getBeers = async (beerNumber, abvNum, classicStr, acidNum) => {
     let url = "https://api.punkapi.com/v2/beers";
@@ -28,6 +29,7 @@ function App() {
     }
     const res = await fetch(url);
     const data = await res.json();
+
     if (acidNum) {
       setBeers(data.filter((beer) => beer.ph < 4 && beer.ph !== null));
     } else {
@@ -54,21 +56,31 @@ function App() {
     setHighABV(!highABV);
   };
 
-  const handleClassicChange = (event) => {
+  const handleClassicChange = () => {
     setClassic(!classic);
   };
 
-  const handleAcidicChange = (event) => {
+  const handleAcidicChange = () => {
     setAcidic(!acidic);
   };
-
+  const getRandom = async () => {
+    let randomBeerUrl = "https://api.punkapi.com/v2/beers/random";
+    const randomRes = await fetch(randomBeerUrl);
+    const randomData = await randomRes.json();
+    console.log(randomData);
+    setRandomBeer(randomData);
+  };
+  console.log(randomBeer);
   return (
     <Router>
       <div className="app">
-        <Nav />
+        <Nav getRandom={getRandom} />
         <Routes>
           <Route path="/" element={<Landing />}></Route>
-          <Route path="/random" element={<RandomBeer />}></Route>
+          <Route
+            path="/random"
+            element={<RandomBeer randomBeer={randomBeer} />}
+          ></Route>
           <Route
             path="/main"
             element={
