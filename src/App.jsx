@@ -16,6 +16,7 @@ function App() {
   const [classic, setClassic] = useState(false);
   const [acidic, setAcidic] = useState(false);
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [randomBeer, setRandomBeer] = useState([]);
 
   const getBeers = async (beerNumber, abvNum, classicStr, acidNum) => {
     let url = "https://api.punkapi.com/v2/beers";
@@ -37,8 +38,16 @@ function App() {
       setBeers(data);
     }
   };
+  const getRandomBeer = async () => {
+    const url = "https://api.punkapi.com/v2/beers/random";
+    const res = await fetch(url);
+    const data = await res.json();
+    setRandomBeer(data);
+  };
+
   useEffect(() => {
     getBeers(numberOfBeer, highABV, classic, acidic);
+    getRandomBeer();
   }, [numberOfBeer, highABV, classic, acidic]);
 
   const handleSearchInput = (event) => {
@@ -75,8 +84,14 @@ function App() {
         <Nav handleMenuToggle={handleMenuToggle} toggleMenu={toggleMenu} />
         <Routes>
           <Route path="/punk-app/" element={<Landing />}></Route>
-          <Route path="/punk-app/random" element={<RandomBeer />}></Route>
-          <Route path="/punk-app/taster-menu" element={<TasterMenu />}></Route>
+          <Route
+            path="/punk-app/random"
+            element={<RandomBeer randomBeer={randomBeer} />}
+          ></Route>
+          <Route
+            path="/punk-app/taster-menu"
+            element={<TasterMenu beers={beers} />}
+          ></Route>
           <Route
             path="/punk-app/main"
             element={
