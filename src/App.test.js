@@ -11,4 +11,12 @@ describe('Test user interactions', () => {
     expect(catalogue).toBeInTheDocument();
     expect(catalogue).toBeTruthy();
   })
+  it('should load taster menu when nav link is clicked', () => {
+    render(<App />);
+    const tasterLink = screen.getByText(/Taster Menu/i)
+    userEvent.click(tasterLink)
+    const taster = screen.getByTestId("taster-menu")
+    expect(taster).toBeInTheDocument();
+    expect(taster).toBeTruthy();
+  })
 })

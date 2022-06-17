@@ -11,7 +11,7 @@ const TasterMenu = ({ beers }) => {
   };
   console.log(numArr);
   return (
-    <div className="taster-menu">
+    <div data-testid="taster-menu" className="taster-menu">
       {activeMenu ? (
         <div className="taster-menu__content">
           <MenuCard beers={beers} index={numArr[0]} number={0} />
