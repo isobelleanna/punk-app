@@ -4,7 +4,7 @@ import MenuCard from "../../components/MenuCard/MenuCard";
 
 const TasterMenu = ({ beers }) => {
   const [activeMenu, setActiveMenu] = useState(false);
-  const [numArr, setNumArr] = useState([1, 2, 4]);
+  const [numArr, setNumArr] = useState([1, 12, 4]);
 
   const toggleMenu = () => {
     setActiveMenu(!activeMenu);
