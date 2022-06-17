@@ -8,7 +8,7 @@ const Nav = ({ toggleMenu, handleMenuToggle }) => {
   return (
     <div className="nav-menu">
       {toggleMenu ? (
-        <MobileMenu />
+        <MobileMenu toggleMenu={toggleMenu} />
       ) : (
         <img
           className="nav-menu__icon"
