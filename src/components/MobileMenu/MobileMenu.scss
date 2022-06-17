@@ -15,20 +15,12 @@
     justify-content: center;
     align-items: center;
   }
-  &__cross {
-    position: absolute;
-    top: 20px;
-    right: 50px;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
 
   &__item {
     font-size: 30px;
     text-decoration: none;
     color: $button-text;
     padding: 20px;
+    font-family: $font-paragraphs;
   }
 }
