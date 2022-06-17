@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/punk-app/static/css/main.cc728e0f.css",
-    "main.js": "/punk-app/static/js/main.ce485bc1.js",
+    "main.css": "/punk-app/static/css/main.7541c30a.css",
+    "main.js": "/punk-app/static/js/main.b7afe7f7.js",
     "static/js/787.11d7d8ae.chunk.js": "/punk-app/static/js/787.11d7d8ae.chunk.js",
     "static/media/beer-background.jpg": "/punk-app/static/media/beer-background.90aa57f820bf212925d4.jpg",
     "index.html": "/punk-app/index.html",
-    "main.cc728e0f.css.map": "/punk-app/static/css/main.cc728e0f.css.map",
-    "main.ce485bc1.js.map": "/punk-app/static/js/main.ce485bc1.js.map",
+    "main.7541c30a.css.map": "/punk-app/static/css/main.7541c30a.css.map",
+    "main.b7afe7f7.js.map": "/punk-app/static/js/main.b7afe7f7.js.map",
     "787.11d7d8ae.chunk.js.map": "/punk-app/static/js/787.11d7d8ae.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc728e0f.css",
-    "static/js/main.ce485bc1.js"
+    "static/css/main.7541c30a.css",
+    "static/js/main.b7afe7f7.js"
   ]
 }
