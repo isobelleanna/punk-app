@@ -2,14 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Nav.scss";
 import menuIcon from "../../assets/images/menu-icon.png";
+import MobileMenu from "../../components/MobileMenu/MobileMenu";
 
 const Nav = ({ toggleMenu, handleMenuToggle }) => {
   return (
     <div className="nav-menu">
       {toggleMenu ? (
-        <p>hello</p>
+        <MobileMenu />
       ) : (
-        <img className="nav-menu__icon" src={menuIcon} alt="menu icon" />
+        <img
+          className="nav-menu__icon"
+          src={menuIcon}
+          alt="menu icon"
+          onClick={handleMenuToggle}
+        />
       )}
 
       <div className="nav-menu__laptop">
