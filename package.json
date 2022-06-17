@@ -1,6 +1,7 @@
 {
   "name": "punk-app",
   "version": "0.1.0",
+  "homepage": "https://isobelleanna.github.io/punk-app",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -39,5 +40,6 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
