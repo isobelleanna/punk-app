@@ -74,11 +74,11 @@ function App() {
       <div className="app">
         <Nav handleMenuToggle={handleMenuToggle} toggleMenu={toggleMenu} />
         <Routes>
-          <Route path="/" element={<Landing />}></Route>
-          <Route path="/random" element={<RandomBeer />}></Route>
-          <Route path="/taster-menu" element={<TasterMenu />}></Route>
+          <Route path="/punk-app/" element={<Landing />}></Route>
+          <Route path="/punk-app/random" element={<RandomBeer />}></Route>
+          <Route path="/punk-app/taster-menu" element={<TasterMenu />}></Route>
           <Route
-            path="/main"
+            path="/punk-app/main"
             element={
               <Catalogue
                 handleInput={handleSearchInput}

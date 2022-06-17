@@ -6,19 +6,31 @@ const MobileMenu = ({ toggleMenu }) => {
   return (
     <div className="mobile-menu">
       <div className="mobile-menu__content">
-        <Link className="mobile-menu__item" to="/" onClick={toggleMenu}>
+        <Link
+          className="mobile-menu__item"
+          to="/punk-app/"
+          onClick={toggleMenu}
+        >
           Home
         </Link>
-        <Link className="mobile-menu__item" to="/main" onClick={toggleMenu}>
+        <Link
+          className="mobile-menu__item"
+          to="/punk-app/main"
+          onClick={toggleMenu}
+        >
           Catalogue
         </Link>
 
-        <Link className="mobile-menu__item" to="/random" onClick={toggleMenu}>
+        <Link
+          className="mobile-menu__item"
+          to="/punk-app/random"
+          onClick={toggleMenu}
+        >
           Beer of the day
         </Link>
         <Link
           className="mobile-menu__item"
-          to="/taster-menu"
+          to="/punk-app/taster-menu"
           onClick={toggleMenu}
         >
           Taster Menu

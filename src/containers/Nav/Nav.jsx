@@ -19,17 +19,17 @@ const Nav = ({ toggleMenu, handleMenuToggle }) => {
       )}
 
       <div className="nav-menu__laptop">
-        <Link className="nav-menu__item" to="/">
+        <Link className="nav-menu__item" to="/punk-app/">
           Home
         </Link>
-        <Link className="nav-menu__item" to="/main">
+        <Link className="nav-menu__item" to="/punk-app/main">
           Catalogue
         </Link>
 
-        <Link className="nav-menu__item" to="/random">
+        <Link className="nav-menu__item" to="/punk-app/random">
           Beer of the day
         </Link>
-        <Link className="nav-menu__item" to="/taster-menu">
+        <Link className="nav-menu__item" to="/punk-app/taster-menu">
           Taster Menu
         </Link>
       </div>
