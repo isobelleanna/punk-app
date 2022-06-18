@@ -21,9 +21,11 @@ const TasterMenu = ({ beers }) => {
       ) : (
         <div>
           <button onClick={toggleMenu}>Generate your tasting menu</button>
-          <div className="taster-menu__card"></div>
-          <div className="taster-menu__card"></div>
-          <div className="taster-menu__card"></div>
+          <div className="taster-menu__content">
+            <div className="taster-menu__card">hello</div>
+            <div className="taster-menu__card">hello</div>
+            <div className="taster-menu__card">hello</div>
+          </div>
         </div>
       )}
     </div>
