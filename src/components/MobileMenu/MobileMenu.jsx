@@ -6,6 +6,8 @@ const MobileMenu = ({ toggleMenu }) => {
   return (
     <div className="mobile-menu">
       <div className="mobile-menu__content">
+        <h1 className="mobile-menu__item">PUNK APP</h1>
+        <hr />
         <Link
           className="mobile-menu__item"
           to="/punk-app/"

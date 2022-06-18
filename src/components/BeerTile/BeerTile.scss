@@ -1,8 +1,44 @@
-@use "../../assets/sass/variables";
+@use "../../assets/sass/variables" as *;
 
 .tile {
+    width: 100%;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
+    background-color: $main-background;
+    color: $main-heading;
+     &__img {
+            height: 100vh;
+            width: auto;
+        }
+    &__basic {
+        width: 40vw;
+        height: auto;
+        &--heading {
+            font-family: $font-headings;
+        }
+        &--content {
+            font-family: $font-paragraphs;
+        }
+    }&__brew {
+        width: 40vw;
+        height: auto;
+        &--heading {
+            font-family: $font-headings;
+        }
+        &--content {
+            font-family: $font-paragraphs;
+        }
+    }
+    &__stats {
+        width: 80vw;
+        height: auto;
+        &--heading {
+            font-family: $font-headings;
+        }
+        &--content {
+            font-family: $font-paragraphs;
+        }
+    }
 }

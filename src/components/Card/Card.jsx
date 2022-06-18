@@ -12,7 +12,7 @@ const Card = (props) => {
         <h4 className="card__stats--heading">Stats</h4>
         <ul>
           <li className="card__stats--list">ABV: {abv}</li>
-          <li className="card__stats--list">PH: {ph}</li>
+          {ph !== null ? <li className="card__stats--list">PH: {ph}</li> : null}
         </ul>
       </div>
     </div>

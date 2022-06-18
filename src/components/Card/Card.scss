@@ -1,8 +1,9 @@
 @use "../../assets/sass/variables" as *;
 .card {
     border: 1px solid $border;
+    border-radius: 20px;
     background-color: $main-card;
-    box-shadow: 5px 10px 8px $border;
+    box-shadow: inset 5px 10px 8px $border;
     width: 200px;
     height: 450px;
     display: flex;
@@ -19,10 +20,9 @@
         text-align: center;
         font-family: $font-paragraphs;
         color: $main-paragraph;
-    }
-    &__image {
-        width: 4vw;
-        height: auto
+    }&__image {
+        width: auto;
+        height:18vh;
     }&__stats {
         display: flex;
         align-items: flex-start;
