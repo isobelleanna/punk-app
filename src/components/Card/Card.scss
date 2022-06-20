@@ -1,9 +1,8 @@
 @use "../../assets/sass/variables" as *;
 .card {
     border: 1px solid $border;
-    border-radius: 20px;
     background-color: $main-card;
-    box-shadow: inset 5px 10px 8px $border;
+    border-radius: 20px;
     width: 200px;
     height: 450px;
     display: flex;
