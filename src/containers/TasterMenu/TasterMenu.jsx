@@ -19,8 +19,10 @@ const TasterMenu = ({ beers }) => {
           <MenuCard beers={beers} index={numArr[2]} number={2} />
         </div>
       ) : (
-        <div>
-          <button onClick={toggleMenu}>Generate your tasting menu</button>
+        <div className="taster-menu__container">
+          <button className="taster-menu__button" onClick={toggleMenu}>
+            Generate your tasting menu
+          </button>
           <div className="taster-menu__content">
             <div className="taster-menu__card"></div>
             <div className="taster-menu__card"></div>

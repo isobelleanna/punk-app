@@ -2,7 +2,6 @@ import "./App.scss";
 import Landing from "./containers/Landing/Landing";
 import Catalogue from "./containers/Catalogue/Catalogue";
 import Nav from "./containers/Nav/Nav";
-import Footer from "./containers/Footer/Footer";
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import RandomBeer from "./containers/RandomBeer/RandomBeer";
