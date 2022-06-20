@@ -1,5 +1,5 @@
 import React from "react";
-import "./MenuCard";
+import "./MenuCard.scss";
 
 const MenuCard = ({ beers, number, index }) => {
   return (

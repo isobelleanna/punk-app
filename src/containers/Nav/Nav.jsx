@@ -25,7 +25,6 @@ const Nav = ({ toggleMenu, handleMenuToggle }) => {
         <Link className="nav-menu__item" to="/punk-app/main">
           Catalogue
         </Link>
-
         <Link className="nav-menu__item" to="/punk-app/random">
           Beer of the day
         </Link>

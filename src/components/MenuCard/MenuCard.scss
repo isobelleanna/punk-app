@@ -1,1 +1,22 @@
 @use "../../assets/sass/variables" as *;
+
+.menu-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid $button-text;
+    height: 250px;
+    width: 250px;
+    &__img {
+        height: 10vh;
+        width: auto;
+    }&__heading {
+        color: $button-text;
+        font-family: $font-headings;
+    }&__content {
+        color: $button-text;
+        font-family: $font-paragraphs;
+    }
+}

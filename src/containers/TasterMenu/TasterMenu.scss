@@ -2,19 +2,20 @@
 
 .taster-menu {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    background-color: $main-background;
+    background-color: $main-card;
     &__content {
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
-        height: 150vh;
-    gap: 1em;
+        height: 400px;
+        gap: 1em;
     }&__card {
-        height: 100vh;
-        width: 30vw;
+        height: 250px;
+        width: 250px;
         background-color: $nav-background;
     }
 }
