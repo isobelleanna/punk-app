@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Nav.scss";
 import menuIcon from "../../assets/images/menu-icon.png";
-import MobileMenu from "../../components/MobileMenu/MobileMenu";
 import gitHub from "../../assets/images/git-hub.png";
 
 const Nav = ({ toggleMenu, handleMenuToggle }) => {
@@ -14,7 +13,36 @@ const Nav = ({ toggleMenu, handleMenuToggle }) => {
       </a>
 
       {toggleMenu ? (
-        <MobileMenu toggleMenu={toggleMenu} />
+        <div className="nav-menu__mobile">
+          <Link
+            className="nav-menu__mobile--item"
+            to="/punk-app/"
+            onClick={handleMenuToggle}
+          >
+            Home
+          </Link>
+          <Link
+            className="nav-menu__mobile--item"
+            to="/punk-app/main"
+            onClick={handleMenuToggle}
+          >
+            Catalogue
+          </Link>
+          <Link
+            className="nav-menu__mobile--item"
+            to="/punk-app/random"
+            onClick={handleMenuToggle}
+          >
+            Beer of the day
+          </Link>
+          <Link
+            className="nav-menu__mobile--item"
+            to="/punk-app/taster-menu"
+            onClick={handleMenuToggle}
+          >
+            Taster Menu
+          </Link>
+        </div>
       ) : (
         <img
           className="nav-menu__icon"
