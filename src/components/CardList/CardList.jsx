@@ -14,6 +14,8 @@ const CardList = (props) => {
           ph={beer.ph}
           abv={beer.abv}
           image={beer.image_url}
+          ibu={beer.ibu}
+          description={beer.description}
         />
       ))}
     </div>
