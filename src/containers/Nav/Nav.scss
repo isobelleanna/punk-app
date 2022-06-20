@@ -1,49 +1,44 @@
-@use '../../assets/sass/variables' as *;
+@use "../../assets/sass/variables" as *;
 
 .nav-menu {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 2em;
-    &__item {
-        color: $main-paragraph;
-        padding: 8px;
-        text-decoration: none;
-        font-family: $font-paragraphs;
-        border-radius: 25px;
-        border: 1px solid $button-background;
-        margin: 1em;
-        &:hover {
-            background-color: $button-background;
-            color: $button-text;
-            border: none;
-        }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2em;
+  &__item {
+    color: $main-paragraph;
+    padding: 8px;
+    text-decoration: none;
+    font-family: $font-paragraphs;
+    border-radius: 25px;
+    border: 1px solid $button-background;
+    margin: 1em;
+    &:hover {
+      background-color: $button-background;
+      color: $button-text;
+      border: none;
     }
-
+  }
 }
 
-@media screen and (min-width: 680px){
-    .nav-menu {
-        &__laptop{
-        display: block;
-        }
-        &__icon {
-            display: none;
-        }
-    
+@media screen and (min-width: 680px) {
+  .nav-menu {
+    &__laptop {
+      display: block;
     }
-    
+    &__icon {
+      display: none;
+    }
+  }
 }
 
-@media screen and (max-width: 680px){
-    .nav-menu {
-        &__laptop{
-        display: none;
-        }
-        &__icon {
-            display: block;
-        }
-    
+@media screen and (max-width: 680px) {
+  .nav-menu {
+    &__laptop {
+      display: none;
     }
-    
+    &__icon {
+      display: block;
+    }
+  }
 }

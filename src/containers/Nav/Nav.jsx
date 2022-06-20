@@ -3,10 +3,16 @@ import { Link } from "react-router-dom";
 import "./Nav.scss";
 import menuIcon from "../../assets/images/menu-icon.png";
 import MobileMenu from "../../components/MobileMenu/MobileMenu";
+import gitHub from "../../assets/images/git-hub.png";
 
 const Nav = ({ toggleMenu, handleMenuToggle }) => {
   return (
     <div className="nav-menu">
+      <a href="https://github.com/isobelleanna/punk-app">
+        {" "}
+        <img src={gitHub} alt="github icon" />
+      </a>
+
       {toggleMenu ? (
         <MobileMenu toggleMenu={toggleMenu} />
       ) : (
