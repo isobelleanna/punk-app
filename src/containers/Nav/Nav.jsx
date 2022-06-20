@@ -8,7 +8,10 @@ import whiteCross from "../../assets/images/white-cross.png";
 const Nav = ({ toggleMenu, handleMenuToggle }) => {
   return (
     <div className="nav-menu">
-      <a href="https://github.com/isobelleanna/punk-app">
+      <a
+        className="nav-menu__github"
+        href="https://github.com/isobelleanna/punk-app"
+      >
         {" "}
         <img src={gitHub} alt="github icon" />
       </a>

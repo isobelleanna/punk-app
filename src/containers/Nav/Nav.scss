@@ -6,18 +6,25 @@
   justify-content: space-between;
   padding: 2em;
   position: relative;
+  &__github {
+    border: 2px solid $button-background;
+    padding: 10px;
+    border-radius: 50px;
+    &:hover {
+      background-color: $button-background;
+    }
+  }
   &__item {
     color: $main-paragraph;
     padding: 8px;
     text-decoration: none;
     font-family: $font-paragraphs;
     border-radius: 25px;
-    border: 1px solid $button-background;
+    border: 2px solid $button-background;
     margin: 1em;
     &:hover {
       background-color: $button-background;
       color: $button-text;
-      border: none;
     }
   }
   &__mobile {
