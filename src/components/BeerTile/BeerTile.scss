@@ -1,44 +1,78 @@
 @use "../../assets/sass/variables" as *;
 
 .tile {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: $main-background;
-    color: $main-heading;
-     &__img {
-            height: 100vh;
-            width: auto;
-        }
-    &__basic {
-        width: 40vw;
-        height: auto;
-        &--heading {
-            font-family: $font-headings;
-        }
-        &--content {
-            font-family: $font-paragraphs;
-        }
-    }&__brew {
-        width: 40vw;
-        height: auto;
-        &--heading {
-            font-family: $font-headings;
-        }
-        &--content {
-            font-family: $font-paragraphs;
-        }
+  width: 70%;
+  background-color: $main-background;
+  color: $main-heading;
+  display: grid;
+  grid-auto-columns: 1fr;
+  gap: 1px;
+  place-items: center;
+  grid-template-areas:
+    "img"
+    "basic"
+    "brew"
+    "stats";
+  &__img {
+    grid-area: img;
+    height: 100vh;
+    width: auto;
+  }
+  &__basic {
+    text-align: center;
+    grid-area: basic;
+    width: 40vw;
+    height: auto;
+    &--heading {
+      font-family: $font-headings;
     }
-    &__stats {
-        width: 80vw;
-        height: auto;
-        &--heading {
-            font-family: $font-headings;
-        }
-        &--content {
-            font-family: $font-paragraphs;
-        }
+    &--content {
+      font-family: $font-paragraphs;
     }
+  }
+  &__brew {
+    text-align: center;
+    grid-area: brew;
+    width: 40vw;
+    height: auto;
+    &--heading {
+      font-family: $font-headings;
+    }
+    &--content {
+      font-family: $font-paragraphs;
+    }
+  }
+  &__stats {
+    grid-area: stats;
+    width: 80vw;
+    height: auto;
+    &--heading {
+      font-family: $font-headings;
+    }
+    &--content {
+      font-family: $font-paragraphs;
+    }
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .tile {
+    grid-auto-columns: 1fr 1fr;
+    grid-template-areas:
+      "basic brew"
+      "stats stats"
+      "img img";
+    place-items: left;
+  }
+}
+
+@media screen and (min-width: 780px) and (max-width: 819px) {
+  .tile {
+    grid-auto-columns: 1fr 1fr;
+    grid-template-areas:
+      "img img"
+      "basic brew"
+      "stats stats";
+    place-items: left;
+  }
 }

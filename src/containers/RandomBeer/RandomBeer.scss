@@ -1,1 +1,8 @@
 @use "../../assets/sass/variables" as *;
+
+.random {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $main-background;
+}
