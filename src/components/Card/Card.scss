@@ -17,6 +17,9 @@
     position: absolute;
     right: 20px;
     top: 15px;
+    &:hover {
+      cursor: pointer;
+    }
   }
   &__button {
     color: $main-paragraph;

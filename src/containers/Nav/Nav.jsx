@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./Nav.scss";
 import menuIcon from "../../assets/images/menu-icon.png";
 import gitHub from "../../assets/images/git-hub.png";
+import whiteCross from "../../assets/images/white-cross.png";
 
 const Nav = ({ toggleMenu, handleMenuToggle }) => {
   return (
@@ -14,6 +15,14 @@ const Nav = ({ toggleMenu, handleMenuToggle }) => {
 
       {toggleMenu ? (
         <div className="nav-menu__mobile">
+          <img
+            className="nav-menu__mobile--cross"
+            src={whiteCross}
+            alt="white-cross"
+            onClick={handleMenuToggle}
+          />
+          <h1 className="nav-menu__mobile--item">PUNK APP</h1>
+          <hr />
           <Link
             className="nav-menu__mobile--item"
             to="/punk-app/"
