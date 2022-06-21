@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/punk-app/static/css/main.fc24f4bd.css",
-    "main.js": "/punk-app/static/js/main.18d35f90.js",
+    "main.js": "/punk-app/static/js/main.4e24be17.js",
     "static/js/787.11d7d8ae.chunk.js": "/punk-app/static/js/787.11d7d8ae.chunk.js",
     "static/media/default-beer.jpg": "/punk-app/static/media/default-beer.7f2a2bf86572e834e8de.jpg",
     "static/media/beer-background.jpg": "/punk-app/static/media/beer-background.90aa57f820bf212925d4.jpg",
     "index.html": "/punk-app/index.html",
     "main.fc24f4bd.css.map": "/punk-app/static/css/main.fc24f4bd.css.map",
-    "main.18d35f90.js.map": "/punk-app/static/js/main.18d35f90.js.map",
+    "main.4e24be17.js.map": "/punk-app/static/js/main.4e24be17.js.map",
     "787.11d7d8ae.chunk.js.map": "/punk-app/static/js/787.11d7d8ae.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fc24f4bd.css",
-    "static/js/main.18d35f90.js"
+    "static/js/main.4e24be17.js"
   ]
 }
