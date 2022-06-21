@@ -1,26 +1,38 @@
 @use "../../assets/sass/variables" as *;
 
 .tile {
-  width: 70%;
-  background-color: $main-background;
-  color: $main-heading;
-  display: grid;
-  grid-auto-columns: 1fr;
-  gap: 1px;
-  place-items: center;
-  grid-template-areas:
-    "img"
-    "basic"
-    "brew"
-    "stats";
+  &__banner {
+    overflow: hidden;
+    background-color: $main-background;
+    height: 35vh;
+    position: relative;
+  }
+
   &__img {
-    grid-area: img;
-    height: 100vh;
-    width: auto;
+    border-radius: 15px;
+    width: calc(100% - 50px);
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &--first {
+      top: 50px;
+    }
+
+    &--last {
+      bottom: 50px;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $button-text;
   }
   &__basic {
     text-align: center;
-    grid-area: basic;
     width: 40vw;
     height: auto;
     &--heading {
@@ -32,7 +44,6 @@
   }
   &__brew {
     text-align: center;
-    grid-area: brew;
     width: 40vw;
     height: auto;
     &--heading {
@@ -43,8 +54,7 @@
     }
   }
   &__stats {
-    grid-area: stats;
-    width: 80vw;
+    width: 30vw;
     height: auto;
     &--heading {
       font-family: $font-headings;
@@ -55,24 +65,24 @@
   }
 }
 
-@media screen and (min-width: 820px) {
-  .tile {
-    grid-auto-columns: 1fr 1fr;
-    grid-template-areas:
-      "basic brew"
-      "stats stats"
-      "img img";
-    place-items: left;
-  }
-}
+// @media screen and (min-width: 820px) {
+//   .tile {
+//     grid-auto-columns: 1fr 1fr;
+//     grid-template-areas:
+//       "basic brew"
+//       "stats stats"
+//       "img img";
+//     place-items: left;
+//   }
+// }
 
-@media screen and (min-width: 780px) and (max-width: 819px) {
-  .tile {
-    grid-auto-columns: 1fr 1fr;
-    grid-template-areas:
-      "img img"
-      "basic brew"
-      "stats stats";
-    place-items: left;
-  }
-}
+// @media screen and (min-width: 780px) and (max-width: 819px) {
+//   .tile {
+//     grid-auto-columns: 1fr 1fr;
+//     grid-template-areas:
+//       "img img"
+//       "basic brew"
+//       "stats stats";
+//     place-items: left;
+//   }
+// }

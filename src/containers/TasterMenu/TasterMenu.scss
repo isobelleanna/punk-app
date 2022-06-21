@@ -17,7 +17,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    height: 850px;
+    height: 1010px;
     gap: 1em;
   }
   &__card {
@@ -43,7 +43,7 @@
 @media screen and (min-width: 820px) {
   .taster-menu {
     &__content {
-      height: 400px;
+      height: 500px;
     }
   }
 }
@@ -51,7 +51,7 @@
 @media screen and (min-width: 550px) {
   .taster-menu {
     &__content {
-      height: 600px;
+      height: 800px;
     }
   }
 }
