@@ -5,18 +5,22 @@ import MenuCard from "../../components/MenuCard/MenuCard";
 const TasterMenu = ({ beers }) => {
   const [activeMenu, setActiveMenu] = useState(false);
   const [numArr, setNumArr] = useState([1, 12, 4]);
+
   const getRandomIndex = () => {
     const randomArr = [];
     let i = 0;
     while (i < 3) {
-      randomArr.push(i);
+      randomArr.push(Math.floor(Math.random() * (20 - 0 + 1)) + 0);
+      i++;
     }
-    console.log(randomArr);
+    setNumArr(randomArr);
   };
 
   const toggleMenu = () => {
+    getRandomIndex();
     setActiveMenu(!activeMenu);
   };
+
   //console.log(numArr);
   return (
     <div data-testid="taster-menu" className="taster-menu">
