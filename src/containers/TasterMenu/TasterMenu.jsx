@@ -25,10 +25,15 @@ const TasterMenu = ({ beers }) => {
   return (
     <div data-testid="taster-menu" className="taster-menu">
       {activeMenu ? (
-        <div className="taster-menu__content">
-          <MenuCard beers={beers} index={numArr[0]} number={0} />
-          <MenuCard beers={beers} index={numArr[1]} number={1} />
-          <MenuCard beers={beers} index={numArr[2]} number={2} />
+        <div className="taster-menu__container">
+          <button className="taster-menu__button" onClick={getRandomIndex}>
+            Try Another Menu
+          </button>
+          <div className="taster-menu__content">
+            <MenuCard beers={beers} index={numArr[0]} number={0} />
+            <MenuCard beers={beers} index={numArr[1]} number={1} />
+            <MenuCard beers={beers} index={numArr[2]} number={2} />
+          </div>
         </div>
       ) : (
         <div className="taster-menu__container">
